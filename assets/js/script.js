@@ -3,7 +3,7 @@ var timeNow = moment().format('H');
 timeNow = parseInt(timeNow);
 
 var timeBlocks = [$('#block1'), $('#block2'), $('#block3'), $('#block4'), $('#block5'), $('#block6'), $('#block7'), $('#block8'), $('#block9')];
-var timeValues = [9, 10, 11, 12, 21, 22, 23, 24, 25];
+var timeValues = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 var tasks = [];
 
