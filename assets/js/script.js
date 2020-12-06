@@ -3,7 +3,7 @@ var timeNow = moment().format('H');
 timeNow = parseInt(timeNow);
 
 var timeBlocks = [$('#block1'), $('#block2'), $('#block3'), $('#block4'), $('#block5'), $('#block6'), $('#block7'), $('#block8'), $('#block9')];
-var timeValues = [9, 10, 11, 12, 13, 14, 18, 21, 22]
+var timeValues = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 var tasks = [];
 
@@ -26,6 +26,17 @@ var colorCode = function() {
 var saveTasks = function () {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
+
+var loadTasks = function () {
+    tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    for (i = 0; i < tasks.length; i++) {
+        var timePosition= tasks[i].time - 8;
+        newID = "block" + timePosition;
+        console.log(tasks[i].item);
+        //if (timeBlocks[i]+9)
+        $('#' + newID).val(tasks[i].item);
+    }
+}
 
 
 $('#btn1').on('click', function () {
@@ -92,3 +103,4 @@ $('#btn9').on('click', function () {
 });
 
 colorCode();
+loadTasks();
