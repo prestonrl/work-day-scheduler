@@ -6,6 +6,8 @@ https://prestonrl.github.io/work-day-scheduler/
 
 Create a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
+![image](https://user-images.githubusercontent.com/70044796/101271176-c4d8b000-373d-11eb-9883-62e009013983.png)
+
  ## User Story
 
 AS AN employee with a busy schedule
